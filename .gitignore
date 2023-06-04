@@ -1,2 +1,4 @@
 node_modules
+public/images
+out
 .env
