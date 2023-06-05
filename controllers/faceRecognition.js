@@ -73,7 +73,7 @@ const loadMatches = async (query, references) => {
 
 const matches = async (req, res) => {
   const query = req.body.imageId;
-  const references = req.body.references;
+  const references = await getPhotos();
   try {
     const matches = await loadMatches(query, references);
     res.status(200).json({ matches: matches });
